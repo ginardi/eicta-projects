@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Authentication</title>
+  <script src="auth.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>User Authentication System</h1>
+
+  <!-- SIGN-UP FORM -->
+  <h2>Create a New Account</h2>
+  <form id="signup-form" action="#" method="post">
+
+    <label>Email:</label>
+    <input type="email" id="signup-email" required 
+       pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" 
+       title="Please enter a valid email address (example: name@mail.com)">
+    
+    <label>Password:</label>
+    <input 
+    type="password" 
+    id="signup-password" 
+    required
+    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+    title="Password must be at least 8 characters long and include uppercase, lowercase, number and special character."
+    >
+
+    <label>Confirm Password:</label>
+    <input type="password" id="signup-password-confirm" required>
+
+    <label>First Name:</label>
+    <input type="text" id="signup-first-name" required>
+
+    <label>Last Name:</label>
+    <input type="text" id="signup-last-name" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" id="signup-dob" required min="1920-01-01">
+
+    <label>Address:</label>
+    <input type="text" id="signup-address" required>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+
+  <!-- LOGIN FORM -->
+  <h2>Log In</h2>
+  <form id="login-form" action="#" method="post">
+
+    <label>Email:</label>
+    <input type="email" id="login-email" required
+       pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+       title="Please enter a valid email address (example: name@mail.com)">
+
+    <label>Password:</label>
+    <input 
+        type="password" 
+        id="login-password" 
+        required>
+
+    <button type="submit">Log In</button>
+  </form>
+
+</body>
+</html>
